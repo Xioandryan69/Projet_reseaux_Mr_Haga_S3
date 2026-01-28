@@ -14,8 +14,7 @@ DESTINATION_DIRECTORY="www.bubble.mg"
 PROJECT_DIRECTORY="projet"
 SERVER_NAME="www.bubble.mg"
 SERVER_ALIAS="bubble.mg"
-#A FIXER 
-IP="10.251.28.216"
+IP="10.251.28.157"
 
 cp $CONFIG /etc/apache2/sites-available/
 
