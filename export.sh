@@ -24,19 +24,19 @@ mkdir -p /var/www/html/$DESTINATION_DIRECTORY
 
 cp -r $PROJECT_DIRECTORY/* /var/www/html/$DESTINATION_DIRECTORY/
 
-rm -f temp
+# Droits
+chown -R www-data:www-data "/var/www/html/$DESTINATION_DIRECTORY"
 
-touch temp
 
-grep -qxF "$IP $SERVER_NAME" /etc/hosts || echo "$IP $SERVER_NAME" > temp
+# Ajoute SERVER_NAME et SERVER_ALIAS uniquement s'ils n'existent pas déjà dans /etc/hosts
+if ! grep -qw "$SERVER_NAME" /etc/hosts; then
+  echo "$IP $SERVER_NAME" >> /etc/hosts
+fi
 
-grep -qxF "$IP $SERVER_ALIAS" /etc/hosts || echo "$IP $SERVER_ALIAS" >> temp
+if ! grep -qw "$SERVER_ALIAS" /etc/hosts; then
+  echo "$IP $SERVER_ALIAS" >> /etc/hosts
+fi
 
-cat /etc/hosts >> temp
-
-cat temp > /etc/hosts
-
-rm temp
 
 a2ensite $CONFIG
 
