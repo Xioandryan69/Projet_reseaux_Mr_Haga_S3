@@ -1,7 +1,7 @@
 #!/bin/bash
-HTTPSCONFIG="www.bubbletest.https.conf"
-CERTIFICAT="www.bubbletest.crt"
-KEY="www.bubbletest.key"
+HTTPSCONFIG="www.bubble.https.conf"
+CERTIFICAT="www.bubble.crt"
+KEY="www.bubble.key"
 
 cp $HTTPSCONFIG /etc/apache2/sites-available/ 
 

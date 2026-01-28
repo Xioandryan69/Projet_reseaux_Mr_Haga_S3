@@ -9,12 +9,13 @@
 #   fichier.conf
 #   PROJECT_DIRECTORY/
 
-CONFIG="www.bubbletest.conf"
-DESTINATION_DIRECTORY="www.bubbletest.com"
+CONFIG="www.bubble.conf"
+DESTINATION_DIRECTORY="www.bubble.mg"
 PROJECT_DIRECTORY="projet"
-SERVER_NAME="www.bubbletest.com"
-SERVER_ALIAS="bubbletest.com"
-IP="172.80.1.92"
+SERVER_NAME="www.bubble.mg"
+SERVER_ALIAS="bubble.mg"
+#A FIXER 
+IP="10.251.28.216"
 
 cp $CONFIG /etc/apache2/sites-available/
 
