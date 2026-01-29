@@ -1,7 +1,7 @@
 #!/bin/bash
 # Ajoute dans /etc/hosts la résolution pour www.bubbletest.com et bubbletest.com
 # Usage: sudo ./add_hosts_client.sh [IP]
-IP="${1:-10.251.28.216}"
+IP="${1:-10.251.28.227}"
 HOSTS="/etc/hosts"
 BACKUP="/etc/hosts.bak.$(date +%s)"
 
