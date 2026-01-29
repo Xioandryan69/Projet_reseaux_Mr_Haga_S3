@@ -6,7 +6,7 @@ set -euo pipefail
 IP="10.251.28.157"
 
 BIND_DIR=/etc/bind
-BIND_FILE="$BIND_DIR/db.bubble.mg"
+BIND_FILE="$BIND_DIR/db.bubble2.mg"
 HOSTS_FILE=/etc/hosts
 
 echo "Ensuring $BIND_DIR exists (will use sudo if necessary)..."
